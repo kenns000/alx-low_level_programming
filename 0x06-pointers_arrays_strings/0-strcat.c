@@ -1,6 +1,6 @@
 #include "main.h"
 /**
- * _strcat - concatenates two string.
+ * _strcat - concatenates two strings.
  * @dest:char
  * @src:char
  * Return: char
@@ -8,14 +8,14 @@
 
 char *_strcat(char *dest, char *src)
 {
-	char *src = dest;
+	char *s = dest;
 
-	while(*dest != '\0')
+	while (*dest != '\0')
 	{
 		dest++;
 	}
 
-	while(*src != '\0')
+	while (*src != '\0')
 	{
 		*dest = *src;
 		dest++;
