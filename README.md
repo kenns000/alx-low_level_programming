@@ -1,1 +1,1 @@
-A repo containg directory with files
+A directory containing C files
