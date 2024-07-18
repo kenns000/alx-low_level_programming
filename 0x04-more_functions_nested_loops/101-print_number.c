@@ -5,18 +5,37 @@
  * @n:.input integer
  */
 
-void print_number(int n)
-{
-	unsigned int i = n;
+#include <stdio.h>
 
-	if (n < 0)
-	{
-		_putchar(45);
-		i = -i;
-	}
-	if (i / 10)
-	{
-		print_number(i / 10);
-	}
-	_putchar(i % 10 + '0');
+int _putchar(char c);
+
+void print_digit(int n) {
+    _putchar(n + '0');
 }
+
+void print_number(int n) {
+    if (n < 0) {
+        _putchar('-');
+        n = -n;
+    }
+    
+    if (n < 10) {
+        print_digit(n);
+    } else {
+        print_number(n / 10);
+        print_digit(n % 10);
+    }
+}
+
+int main() {
+    int number = 123456;
+    print_number(number);
+    _putchar('\n');
+    
+    return 0;
+}
+
+int _putchar(char c) {
+    return putchar(c);
+}
+
